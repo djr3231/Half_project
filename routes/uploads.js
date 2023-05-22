@@ -14,9 +14,16 @@ router.get("/", async(req,res) => {
 
 router.post("/cloud1", async(req,res) => {
   try{
-    const myFile = req.files.myFile;
-    console.log(myFile);
-    res.json({msg:"file sended"})
+    const myFile = req.body.myFile;
+    if(myFile){
+      // מעלה את התמונה לקלואדינרי 
+      const data = await cloudinary.uploader.upload(myFile.tempFilePath ,{ unique_filename:true})
+      // console.log(myFile);
+      // יחזיר פרטים על התמונה שנמצאת בשרת כולל הכתובת שלה
+      // ב secure_url
+      res.json(data)
+
+    }
   }
   catch(err){
     console.log(err);

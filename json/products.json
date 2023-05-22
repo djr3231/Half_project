@@ -1,0 +1,69 @@
+[{
+  "_id": {
+    "$oid": "6461f281ddc83b428bd83f2e"
+  },
+  "name": "ASUS F15",
+  "info": "ASUS F15, BEST LAPTOP EVER!",
+  "price": 5000,
+  "category_url": "laptops",
+  "img_url": "https://images.pexels.com/photos/5793953/pexels-photo-5793953.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "user_id": "644f62551ca3e1d6d878dc12",
+  "createdAt": {
+    "$date": "2023-05-15T08:51:13.801Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T08:51:13.801Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6461f2edddc83b428bd83f30"
+  },
+  "name": "MAC 2023",
+  "info": "MAC 2023 of apple , nice computer of apple",
+  "price": 6000,
+  "category_url": "laptops",
+  "img_url": "https://images.pexels.com/photos/5855210/pexels-photo-5855210.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "user_id": "644f62551ca3e1d6d878dc12",
+  "createdAt": {
+    "$date": "2023-05-15T08:53:01.042Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T08:53:01.042Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6461f341ddc83b428bd83f32"
+  },
+  "name": "PLAYSTATION 4",
+  "info": "NICE PLAYSTAION 4 , LIKE NEW IN WHITE COLOR",
+  "price": 700,
+  "category_url": "consoles",
+  "img_url": "https://images.pexels.com/photos/1174746/pexels-photo-1174746.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "user_id": "644f62551ca3e1d6d878dc12",
+  "createdAt": {
+    "$date": "2023-05-15T08:54:25.434Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T08:54:25.434Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6461f3abddc83b428bd83f34"
+  },
+  "name": "GALAXY FLIP 4",
+  "info": "NICE SMARTPHONE THAT FLIP TO HALF OF SAMSUNG COMPANY",
+  "price": 1600,
+  "category_url": "smartphones",
+  "img_url": "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "user_id": "644f62551ca3e1d6d878dc12",
+  "createdAt": {
+    "$date": "2023-05-15T08:56:11.016Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T08:56:11.016Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  <script>
+
+    const showName = (_name = "joe",_age = 90) => {
+      document.body.innerHTML += `<h2>${_name}, age: ${_age}</h2>`
+    }
+
+    showName("koko",60);
+    showName("moshe");
+    showName();
+
+  </script>
+</body>
+</html>

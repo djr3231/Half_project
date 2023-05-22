@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "643cf4a05cf276f8b63f5235"
+  },
+  "name": "Cola Pepsi",
+  "ml": "330",
+  "price": 8
+},{
+  "_id": {
+    "$oid": "643cf4a05cf276f8b63f5236"
+  },
+  "name": "Black coffee",
+  "ml": "250",
+  "price": 7
+},{
+  "_id": {
+    "$oid": "643cf4a05cf276f8b63f5237"
+  },
+  "name": "Green Tea",
+  "ml": "500",
+  "price": 10
+},{
+  "_id": {
+    "$oid": "643d06613dfc82573bb9c9f5"
+  },
+  "name": "Sprite",
+  "ml": 330,
+  "price": 9,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643d0b068cbab88f37440d29"
+  },
+  "name": "Fanta bottle 2",
+  "ml": 500,
+  "price": 9,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643d0d2f4d411c290e4dac47"
+  },
+  "name": "Soda",
+  "ml": 330,
+  "price": 7,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643d0d404d411c290e4dac49"
+  },
+  "name": "Beer Corona",
+  "ml": 330,
+  "price": 15,
+  "__v": 0
+}]

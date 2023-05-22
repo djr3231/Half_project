@@ -1,0 +1,131 @@
+[{
+  "_id": {
+    "$oid": "64462c0069e30eb8cb5f8a48"
+  },
+  "name": "Shaol ben yeshai",
+  "email": "shaol@walla.com",
+  "password": "$2b$10$noVFICTVO2wTDkik.jq/aeQmsFf3YHKpViiMsHeSZPcaIT71sf6cm",
+  "createdAt": {
+    "$date": "2023-04-24T07:13:04.752Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T11:05:22.334Z"
+  },
+  "__v": 0,
+  "role": "user"
+},{
+  "_id": {
+    "$oid": "6446396cd61fb7ee96da3928"
+  },
+  "name": "Shaol ben yeshai",
+  "email": "shaol1@walla.com",
+  "password": "$2b$10$5BuydPBkt1gdjAnX/LqTr.zD/8hJpVLWfNRqApR2t9YJTY9BxhpPa",
+  "createdAt": {
+    "$date": "2023-04-24T08:10:20.185Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-24T08:10:20.185Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "644f62551ca3e1d6d878dc12"
+  },
+  "name": "super admin",
+  "email": "admin@walla.com",
+  "password": "$2b$10$jVGWWUf/b7Hm1v4RhUgR8e8BHYfY5TO1z0JQLhU9/bs4wQrDLmi0W",
+  "createdAt": {
+    "$date": "2023-05-01T06:55:17.473Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T11:01:52.634Z"
+  },
+  "__v": 0,
+  "role": "superadmin"
+},{
+  "_id": {
+    "$oid": "644f7a80fcc370fd6cba1df6"
+  },
+  "name": "biden",
+  "email": "biden@walla.com",
+  "password": "$2b$10$EIdV39BTKYegbwuaTnpcP.FYLekeGmPdjeHE.wMTeNURcZC8a5wV2",
+  "createdAt": {
+    "$date": "2023-05-01T08:38:24.363Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T10:52:03.823Z"
+  },
+  "__v": 0,
+  "role": "admin"
+},{
+  "_id": {
+    "$oid": "644f7b0cfcc370fd6cba1dfc"
+  },
+  "name": "trump",
+  "email": "trump@walla.com",
+  "password": "$2b$10$DPvg74VxoFgRur0PiVYfZ.jHQGuXEOXqrLyPTxAesYKTkBXIzH.zm",
+  "createdAt": {
+    "$date": "2023-05-01T08:40:44.124Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-01T08:40:44.124Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6450fc15d90c6f0258a3dcc4"
+  },
+  "name": "momo",
+  "email": "momo@walla.com",
+  "password": "$2b$10$Srd5QJVDXCALcZZCS0NIU.hQt9JJw/X3XlRaIZ8qK2IcW7vPvW0AC",
+  "createdAt": {
+    "$date": "2023-05-02T12:03:33.452Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-02T12:03:33.452Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645102fd95ab3f394530bfc6"
+  },
+  "name": "lolo",
+  "email": "lolo@walla.com",
+  "password": "$2b$10$Z8Tl/VYdReED2zP1EZLtBOAacgypAGpgKY/6LL8DEdSf1aiNpZb/W",
+  "createdAt": {
+    "$date": "2023-05-02T12:33:02.041Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-02T12:33:02.041Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64589ac9ebef1ffc1bb34fd9"
+  },
+  "name": "mimi",
+  "email": "mimi@walla.com",
+  "password": "$2b$10$Ng9Oo7ueZYTgpoSLvZGaLuvhYVz54WkMdH5NOO74mCNG9aW1J.7Ry",
+  "createdAt": {
+    "$date": "2023-05-08T06:46:33.515Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T06:46:33.515Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64589d1aca97da9b305f4cd0"
+  },
+  "name": "obama",
+  "email": "obama@walla.com",
+  "password": "$2b$10$rTJ9QCj8WnpBLLuDL5uGeO2NwfiMRhOQQ/NDGtUdyj/bgZ3dn03EC",
+  "role": "user",
+  "createdAt": {
+    "$date": "2023-05-08T06:56:26.886Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T06:56:26.886Z"
+  },
+  "__v": 0
+}]

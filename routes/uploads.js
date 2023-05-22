@@ -11,7 +11,6 @@ cloudinary.config({
 router.get("/", async(req,res) => {
   res.json({msg:"Upload work"});
 })
-
 router.post("/cloud1", async(req,res) => {
   try{
     const myFile = req.body.myFile;
@@ -24,6 +23,18 @@ router.post("/cloud1", async(req,res) => {
       res.json(data)
 
     }
+  }
+  catch(err){
+    console.log(err);
+    res.status(502).json({err})
+  }
+})
+
+router.post("/cloud1", async(req,res) => {
+  try{
+    const myFile = req.files.myFile;
+    console.log(myFile);
+    res.json({msg:"file sended"})
   }
   catch(err){
     console.log(err);

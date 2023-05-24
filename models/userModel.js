@@ -1,20 +1,17 @@
 const mongoose = require("mongoose");
 const Joi = require("joi");
-// ספרייה שיודעת לייצר ולנהל טוקנים
 const jwt = require("jsonwebtoken");
 
 const userSchema = new mongoose.Schema({
   name:String,
   email:String,
   password:String,
-  // הגדרת רול כסטרינג וערך דיפולטיבי של יוזר
   role:{
     type:String, default:"user"
   },
   favs_ar:{
     type:Array, default:[]
   }
-  // timestamps -> מוסיף מאפיינים של זמן הוספה וזמן עדכון
 },{timestamps:true});
 
 exports.UserModel = mongoose.model("users",userSchema);

@@ -1,5 +1,5 @@
 const express = require("express");
-const {ProductModel,validateProduct} = require("../models/productModel");
+const {toyModel,validatetoy} = require("../models/toyModel");
 const { auth } = require("../middlewares/auth");
 const router = express.Router();
 
@@ -15,7 +15,7 @@ router.get("/", async(req,res) => {
     // TODO: חיפוש , קטגוריה, יוזר איי די
     let filterFind = {}
     if(category){
-      filterFind = {category_url:category}
+      filterFind = {category:category}
     }
     if(search){
       const searchExp = new RegExp(search,"i");
@@ -26,7 +26,7 @@ router.get("/", async(req,res) => {
       filterFind = {user_id}
     }
     
-    const data = await ProductModel
+    const data = await toyModel
     .find(filterFind)
     .limit(perPage)
     .skip(page * perPage)
@@ -47,7 +47,7 @@ router.get("/count", async(req,res) => {
     const user_id = req.query.user_id;
     let filterFind = {}
     if(category){
-      filterFind = {category_url:category}
+      filterFind = {category:category}
     }
     if(search){
       const searchExp = new RegExp(search,"i");
@@ -57,7 +57,7 @@ router.get("/count", async(req,res) => {
     if(user_id){
       filterFind = {user_id}
     }
-    const count = await ProductModel.countDocuments(filterFind);
+    const count = await toyModel.countDocuments(filterFind);
     res.json({count,pages:Math.ceil(count/perPage)})
   }
   catch(err){
@@ -69,15 +69,15 @@ router.get("/count", async(req,res) => {
 
 
 router.post("/", auth, async(req,res) => {
-  const validBody = validateProduct(req.body);
+  const validBody = validatetoy(req.body);
   if(validBody.error){
     return res.status(400).json(validBody.error.details)
   }
   try{
-    const product = new ProductModel(req.body);
-    product.user_id = req.tokenData._id;
-    await product.save();
-    res.json(product);
+    const toy = new toyModel(req.body);
+    toy.user_id = req.tokenData._id;
+    await toy.save();
+    res.json(toy);
   }
   catch(err){
     console.log(err);
@@ -93,8 +93,8 @@ router.post("/groupIds", async(req,res) => {
       return res.status(400).json({msg:"You need to send favs_ar as array"});
      }
     // $in: -> מאפשר לשלוף מספר רשומות שאין בינם קשר כגון קטגוריה או משתמש
-    // const data = await ProductModel.find({_id:{$in:["6461f281ddc83b428bd83f2e","6461f3abddc83b428bd83f34"]}}).limit(20)
-    const data = await ProductModel.find({_id:{$in:req.body.favs_ar}}).limit(20)
+    // const data = await toyModel.find({_id:{$in:["6461f281ddc83b428bd83f2e","6461f3abddc83b428bd83f34"]}}).limit(20)
+    const data = await toyModel.find({_id:{$in:req.body.favs_ar}}).limit(20)
     res.json(data);
   }
   catch(err){
@@ -106,7 +106,7 @@ router.post("/groupIds", async(req,res) => {
 
 
 router.put("/:id", auth, async(req,res) => {
-  const validBody = validateProduct(req.body);
+  const validBody = validatetoy(req.body);
   if(validBody.error){
     return res.status(400).json(validBody.error.details)
   }
@@ -114,10 +114,10 @@ router.put("/:id", auth, async(req,res) => {
     const id = req.params.id;
     let data;
     if(req.tokenData.role != "user"){
-      data =  await ProductModel.updateOne({_id:id},req.body)
+      data =  await toyModel.updateOne({_id:id},req.body)
     }
     else{
-      data = await ProductModel.updateOne({_id:id,user_id:req.tokenData._id},req.body)
+      data = await toyModel.updateOne({_id:id,user_id:req.tokenData._id},req.body)
 
     }
     res.json(data);
@@ -134,11 +134,11 @@ router.delete("/:id", auth, async(req,res) => {
     let data;
     // בודק אם המשתמש הוא לא יוזר , אל אדמין או סופר אדמין
     if(req.tokenData.role != "user"){
-      data = await ProductModel.deleteOne({_id:id})
+      data = await toyModel.deleteOne({_id:id})
     }
     // אם לא יבדוק שאכן הרשומה שייכת למשתמש
     else{
-      data = await ProductModel.deleteOne({_id:id,user_id:req.tokenData._id})
+      data = await toyModel.deleteOne({_id:id,user_id:req.tokenData._id})
     }
     res.json(data);
   }

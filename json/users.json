@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "643d26e90c93ca2726e89627"
+  },
+  "name": "David",
+  "email": "dfdfdfd4@gmail.com",
+  "password": "123",
+  "createdAt": {
+    "$date": "2023-04-17T11:00:57.571Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-17T11:00:57.571Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643d29c484fc8204b4a04a90"
+  },
+  "name": "googee",
+  "email": "geoeogeogoe@walla.com",
+  "password": "$2b$10$GK4Zy3ACDUZJrxfjjvZzbOAiZuMDFWzHc6Pre9FwMuPfBUUyQopdW",
+  "createdAt": {
+    "$date": "2023-04-17T11:13:08.717Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-17T11:13:08.717Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64462e249768b41056b37756"
+  },
+  "name": "Shaol ben yeshai",
+  "email": "shaol@walla.com",
+  "password": "$2b$10$i2XIFydjA6itWeBM6lYIqelsxv.e8D9Eo93FI6pSGFMzPg37ulw9K",
+  "createdAt": {
+    "$date": "2023-04-24T07:22:12.905Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-24T07:22:12.905Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64462e839768b41056b37758"
+  },
+  "name": "David ben Yishai",
+  "email": "david@shmalla.com",
+  "password": "$2b$10$J74HcKr1R9g3TpT6.bgt9.dUVlIBDImEbh5e5rYAt1VC63x6F/nP2",
+  "createdAt": {
+    "$date": "2023-04-24T07:23:47.860Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-24T07:23:47.860Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64510fbec49a0af8b4f7eb37"
+  },
+  "name": "admin",
+  "email": "admin@walla.com",
+  "password": "$2b$10$.eYjocLmg/s2gndXJaxlRe/rK6aY8sNp1iLN56tngHuX41WKxVvD2",
+  "createdAt": {
+    "$date": "2023-05-02T13:27:26.635Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-02T13:27:26.635Z"
+  },
+  "__v": 0,
+  "role": "admin"
+},{
+  "_id": {
+    "$oid": "64589b14f66a3178adb0e655"
+  },
+  "name": "biden",
+  "email": "biden@walla.com",
+  "password": "$2b$10$/.XpDiePeSXQIPlQv9mup.Wp3SnszYkV7ynCnKGhtKWey45ANTrrO",
+  "createdAt": {
+    "$date": "2023-05-08T06:47:48.383Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T06:47:48.383Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64589bf9f66a3178adb0e65a"
+  },
+  "name": "biden2",
+  "email": "biden2@walla.com",
+  "password": "$2b$10$6YrEWjit/PDLxJ.mMeRStesa2fkYxWung1QeiKpqdKNLR2a4WOrvy",
+  "createdAt": {
+    "$date": "2023-05-08T06:51:37.491Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T06:51:37.491Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64589d0c1df7988253ee28b3"
+  },
+  "name": "tramp",
+  "email": "tramp@walla.com",
+  "password": "$2b$10$djtjf/KtIsHdI6k5GB16Pe0pO0bhVimSpliscuZrHB9PlBNcehXm.",
+  "role": "user",
+  "createdAt": {
+    "$date": "2023-05-08T06:56:12.836Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T06:56:12.836Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6458b71519cc7b9af66017ae"
+  },
+  "name": "spider man",
+  "email": "spiderMan@walla.com",
+  "password": "$2b$10$JHg4arg2zD5brqml29M.ne2nmLjFY2/6tShRDDeY372l8NT.e0fTm",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2023-05-08T08:47:17.499Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T10:49:28.027Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6458b7b119cc7b9af66017b0"
+  },
+  "name": "superAdmin",
+  "email": "superAdmin@walla.com",
+  "password": "$2b$10$uD9jyi9XdsYAmdQcbkJTXO7ZN1o8wsdqRwEJfwt1AaYK4hYFvm2oW",
+  "role": "superadmin",
+  "createdAt": {
+    "$date": "2023-05-08T08:49:53.979Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T08:49:53.979Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6458b8fa19cc7b9af66017b2"
+  },
+  "name": "admin2",
+  "email": "admin2@walla.com",
+  "password": "$2b$10$sF567sRufKgK.V.2x28QO.YttK.fb1UiXzb9PfRDa09tOwzv4NWWS",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2023-05-08T08:55:22.362Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-08T08:55:22.362Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646214229074afec0c0b4930"
+  },
+  "name": "mozly goozly",
+  "email": "mozly@walla.com",
+  "password": "$2b$10$O3eBQ/wi6Rng9BEJMNBqDuNAXWRkwyZdaQgEwx43rjw3.EG/m9CtS",
+  "role": "user",
+  "favs_ar": [
+    "6461fa40cc5ac31e68c47581",
+    "6461f341ddc83b428bd83f32",
+    "6461fa35cc5ac31e68c4757f"
+  ],
+  "createdAt": {
+    "$date": "2023-05-15T11:14:42.499Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-15T12:26:50.513Z"
+  },
+  "__v": 0
+}]

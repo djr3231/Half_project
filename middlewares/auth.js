@@ -1,3 +1,4 @@
+const { config } = require("dotenv");
 const jwt = require("jsonwebtoken")
 
 exports.auth = (req,res,next) => {
@@ -23,7 +24,7 @@ exports.authAdmin = (req,res,next) => {
   }
   try{
     
-    const decodeToken = jwt.verify(token, "monkeysSecret");
+    const decodeToken = jwt.verify(token, config.TOKEN_SECRET);
     if(decodeToken.role != "admin" && decodeToken.role != "superadmin" ){
       return res.status(401).json({err:"You must be admin in this endpoint"})
     }

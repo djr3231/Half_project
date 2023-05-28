@@ -10,9 +10,6 @@ const userSchema = new mongoose.Schema({
   role:{
     type:String, default:"user"
   },
-  favs_ar:{
-    type:Array, default:[]
-  }
 },{timestamps:true});
 
 exports.UserModel = mongoose.model("users",userSchema);

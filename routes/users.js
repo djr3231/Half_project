@@ -11,7 +11,6 @@ router.get("/", async (req, res) => {
 
 
 
-// auth -> קורא קודם לפונקציית מיידל וואר שבודקת אם יש טוקן
 router.get("/userInfo", auth, async (req, res) => {
   try {
 

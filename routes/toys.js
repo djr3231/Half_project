@@ -12,7 +12,7 @@ router.get("/", async(req,res) => {
     const category = req.query.category;
     const search = req.query.s;
     const user_id = req.query.user_id;
-    // TODO: חיפוש , קטגוריה, יוזר איי די
+   
     let filterFind = {}
     if(category){
       filterFind = {category:category}
@@ -38,33 +38,31 @@ router.get("/", async(req,res) => {
     res.status(502).json({err})
   }
 })
-// שולף את הכמות, לפי חיפוש,איי די משתמש, קטגוריה של הרשומות
-router.get("/count", async(req,res) => {
-  try{
-    const perPage = req.query.perPage || 10;
-    const category = req.query.category;
-    const search = req.query.s;
-    const user_id = req.query.user_id;
-    let filterFind = {}
-    if(category){
-      filterFind = {category:category}
-    }
-    if(search){
-      const searchExp = new RegExp(search,"i");
-      // יחפש את הביטוי גם בשם וגם באינפו 
-      filterFind = {$or:[{name:searchExp},{info:searchExp}]}
-    }
-    if(user_id){
-      filterFind = {user_id}
-    }
-    const count = await toyModel.countDocuments(filterFind);
-    res.json({count,pages:Math.ceil(count/perPage)})
-  }
-  catch(err){
-    console.log(err);
-    res.status(502).json({err})
-  }
-})
+// router.get("/count", async(req,res) => {
+//   try{
+//     const perPage = req.query.perPage || 10;
+//     const category = req.query.category;
+//     const search = req.query.s;
+//     const user_id = req.query.user_id;
+//     let filterFind = {}
+//     if(category){
+//       filterFind = {category:category}
+//     }
+//     if(search){
+//       const searchExp = new RegExp(search,"i");
+//       filterFind = {$or:[{name:searchExp},{info:searchExp}]}
+//     }
+//     if(user_id){
+//       filterFind = {user_id}
+//     }
+//     const count = await toyModel.countDocuments(filterFind);
+//     res.json({count,pages:Math.ceil(count/perPage)})
+//   }
+//   catch(err){
+//     console.log(err);
+//     res.status(502).json({err})
+//   }
+// })
 
 
 
@@ -87,21 +85,21 @@ router.post("/", auth, async(req,res) => {
 
 
 
-router.post("/groupIds", async(req,res) => {
-  try{
-    if(!Array.isArray(req.body.favs_ar)){
-      return res.status(400).json({msg:"You need to send favs_ar as array"});
-     }
-    // $in: -> מאפשר לשלוף מספר רשומות שאין בינם קשר כגון קטגוריה או משתמש
-    // const data = await toyModel.find({_id:{$in:["6461f281ddc83b428bd83f2e","6461f3abddc83b428bd83f34"]}}).limit(20)
-    const data = await toyModel.find({_id:{$in:req.body.favs_ar}}).limit(20)
-    res.json(data);
-  }
-  catch(err){
-    console.log(err);
-    res.status(502).json({err})
-  }
-})
+// router.post("/groupIds", async(req,res) => {
+//   try{
+//     if(!Array.isArray(req.body.favs_ar)){
+//       return res.status(400).json({msg:"You need to send favs_ar as array"});
+//      }
+//     // $in: -> מאפשר לשלוף מספר רשומות שאין בינם קשר כגון קטגוריה או משתמש
+//     // const data = await toyModel.find({_id:{$in:["6461f281ddc83b428bd83f2e","6461f3abddc83b428bd83f34"]}}).limit(20)
+//     const data = await toyModel.find({_id:{$in:req.body.favs_ar}}).limit(20)
+//     res.json(data);
+//   }
+//   catch(err){
+//     console.log(err);
+//     res.status(502).json({err})
+//   }
+// })
 
 
 
@@ -132,11 +130,10 @@ router.delete("/:id", auth, async(req,res) => {
   try{
     const id = req.params.id;
     let data;
-    // בודק אם המשתמש הוא לא יוזר , אל אדמין או סופר אדמין
     if(req.tokenData.role != "user"){
       data = await toyModel.deleteOne({_id:id})
     }
-    // אם לא יבדוק שאכן הרשומה שייכת למשתמש
+
     else{
       data = await toyModel.deleteOne({_id:id,user_id:req.tokenData._id})
     }

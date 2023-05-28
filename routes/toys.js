@@ -4,9 +4,7 @@ const { auth } = require("../middlewares/auth");
 const router = express.Router();
 
 
-router.get("/", async (req, res) => {
-  res.json({ msg: "Toys endpoint" });
-})
+
 
 router.get("/", async(req,res) => {
   try{
@@ -90,21 +88,21 @@ router.post("/", auth, async(req,res) => {
 
 
 
-// router.post("/groupIds", async(req,res) => {
-//   try{
-//     if(!Array.isArray(req.body.favs_ar)){
-//       return res.status(400).json({msg:"You need to send favs_ar as array"});
-//      }
-//     // $in: -> מאפשר לשלוף מספר רשומות שאין בינם קשר כגון קטגוריה או משתמש
-//     // const data = await toyModel.find({_id:{$in:["6461f281ddc83b428bd83f2e","6461f3abddc83b428bd83f34"]}}).limit(20)
-//     const data = await toyModel.find({_id:{$in:req.body.favs_ar}}).limit(20)
-//     res.json(data);
-//   }
-//   catch(err){
-//     console.log(err);
-//     res.status(502).json({err})
-//   }
-// })
+router.post("/groupIds", async(req,res) => {
+  try{
+    if(!Array.isArray(req.body.favs_ar)){
+      return res.status(400).json({msg:"You need to send favs_ar as array"});
+     }
+    // $in: -> מאפשר לשלוף מספר רשומות שאין בינם קשר כגון קטגוריה או משתמש
+    // const data = await toyModel.find({_id:{$in:["6461f281ddc83b428bd83f2e","6461f3abddc83b428bd83f34"]}}).limit(20)
+    const data = await toyModel.find({_id:{$in:req.body.favs_ar}}).limit(20)
+    res.json(data);
+  }
+  catch(err){
+    console.log(err);
+    res.status(502).json({err})
+  }
+})
 
 
 

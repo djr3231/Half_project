@@ -8,7 +8,7 @@ exports.auth = (req,res,next) => {
   }
   try{
     
-    const decodeToken = jwt.verify(token, config.TOKEN_SECRET);
+    const decodeToken = jwt.verify(token, "jojododos");
     req.tokenData = decodeToken
     next();
   }
@@ -32,6 +32,6 @@ exports.authAdmin = (req,res,next) => {
     next();
   }
   catch(err){
-    res.status(401).json({err:"token invalid or expired 2222 bbbbb"})
+    res.status(401).json({err:"admin token invalid or expired 3333 bbbbb"})
   }
 }

@@ -6,8 +6,8 @@ const router = express.Router();
 
 
 router.get("/", async (req, res) => {
-  res.json({ msg: "toys endpoint" });
-  console.log(config.TOKEN_SECRET);
+  res.json({ msg: config.TOKEN_SECRET
+  });
   
 })
 

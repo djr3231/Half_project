@@ -1,10 +1,15 @@
 const express = require("express");
 const {toyModel,validatetoy} = require("../models/toyModel");
 const { auth } = require("../middlewares/auth");
+const { config } = require("dotenv");
 const router = express.Router();
 
 
-
+router.get("/", async (req, res) => {
+  res.json({ msg: "toys endpoint" });
+  console.log(config.TOKEN_SECRET);
+  
+})
 
 router.get("/", async(req,res) => {
   try{
@@ -70,6 +75,7 @@ router.get("/", async(req,res) => {
 
 
 router.post("/", auth, async(req,res) => {
+  
   const validBody = validatetoy(req.body);
   if(validBody.error){
     return res.status(400).json(validBody.error.details)

@@ -8,7 +8,7 @@ exports.auth = (req,res,next) => {
   }
   try{
     
-    const decodeToken = jwt.verify(token, "jojododos");
+    const decodeToken = jwt.verify(token, config.TOKEN_SECRET);
     req.tokenData = decodeToken
     next();
   }

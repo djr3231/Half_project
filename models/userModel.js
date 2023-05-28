@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Joi = require("joi");
 const jwt = require("jsonwebtoken");
-const dotenv = require("dotenv").config();
+const { config } = require("dotenv");
 
 const userSchema = new mongoose.Schema({
   name:String,
@@ -27,7 +27,6 @@ exports.createToken = (user_id,role = "user") => {
 exports.validateUser = (_reqBody) => {
   const joiSchema = Joi.object({
     name:Joi.string ().min(2).max(150).required(),
-    // email() -> בודק שהמייל תקין עם שטרודל נקודה ועוד
     email:Joi.string().min(2).max(200).email().required(),
     password:Joi.string().min(3).max(150).required()
   })

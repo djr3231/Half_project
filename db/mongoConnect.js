@@ -1,4 +1,4 @@
-const { config } = require('../config/secret');
+// const { config } = require('../config/secret');
 const mongoose = require('mongoose');
 
 main().catch(err => console.log(err));

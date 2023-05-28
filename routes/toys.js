@@ -3,6 +3,11 @@ const {toyModel,validatetoy} = require("../models/toyModel");
 const { auth } = require("../middlewares/auth");
 const router = express.Router();
 
+
+router.get("/", async (req, res) => {
+  res.json({ msg: "Toys endpoint" });
+})
+
 router.get("/", async(req,res) => {
   try{
     const perPage = req.query.perPage || 10;

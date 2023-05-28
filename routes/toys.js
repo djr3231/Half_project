@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 router.get("/", async (req, res) => {
-  res.json({ msg: config.TOKEN_SECRET
+  res.json({ msg: `${config.TOKEN_SECRET}`
   });
   
 })

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,41 +9,81 @@
 
   <title>Document</title>
 </head>
-<body class="bg-slate-900">
-  
 
-  <div class="container  mx-auto my-10 ">
+<body class="bg-slate-900">
+
+
+  <div class="container mx-auto my-10 ">
+
     <div class="px-4 sm:px-0 ">
       <h2 class="text-3xl font-semibold leading-7 text-gray-200">Toys documentation</h2>
       <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and application.</p>
     </div>
-    <div class="mt-6 border-t border-gray-100">
-      <dl class="divide-y divide-gray-100">
-        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-          <dt class="text-sm font-medium leading-6 text-teal-300">/get</dt>
-          <dd class="mt-1 text-sm leading-6 text-emerald-500 sm:col-span-2 sm:mt-0">
-            
-          </dd>
-        </div>
-        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-          <dt class="text-sm font-medium leading-6 text-teal-300">Application for</dt>
-          <dd class="mt-1 text-sm leading-6 text-emerald-500 sm:col-span-2 sm:mt-0">Backend Developer</dd>
-        </div>
-        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-          <dt class="text-sm font-medium leading-6 text-teal-300">Email address</dt>
-          <dd class="mt-1 text-sm leading-6 text-emerald-500 sm:col-span-2 sm:mt-0">margotfoster@example.com</dd>
-        </div>
-        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-          <dt class="text-sm font-medium leading-6 text-teal-300">Salary expectation</dt>
-          <dd class="mt-1 text-sm leading-6 text-emerald-500 sm:col-span-2 sm:mt-0">$120,000</dd>
-        </div>
-        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-          <dt class="text-sm font-medium leading-6 text-teal-300">About</dt>
-          <dd class="mt-1 text-sm leading-6 text-emerald-500 sm:col-span-2 sm:mt-0">Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.</dd>
-        </div>
-    
-      </dl>
+    <div class="flex items-center">
+
+      <div class="mt-6 border-t border-gray-100">
+
+        <table>
+          <thead>
+            <tr>
+              <th>dfdfdffffd</th>
+              <th>dfdfdffffd</th>
+              <th>dfdfdffffd</th>
+            </tr>
+
+          </thead>
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-300">/get</dt>
+            <dd class="mt-1 text-sm leading-6 text-emerald-500 sm:col-span-2 sm:mt-0">Backend Developer</dd>
+          </div>
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-300">/post</dt>
+            <dd class="mt-1 text-sm leading-6 text-emerald-500 sm:col-span-2 sm:mt-0">margotfoster@example.com</dd>
+          </div>
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-300">/put</dt>
+            <dd class="mt-1 text-sm leading-6 text-emerald-500 sm:col-span-2 sm:mt-0">$120,000</dd>
+          </div>
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-300">/delete</dt>
+            <dd class="mt-1 text-sm leading-6 text-emerald-500 sm:col-span-2 sm:mt-0">Fugiat ipsum ipsum deserunt culpa
+              aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint.
+              Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing
+              reprehenderit deserunt qui eu.</dd>
+          </div>
+
+        </table>
+      </div>
     </div>
+
   </div>
 </body>
+
 </html>
+
+
+<!-- <pre class="bg-indigo-950 text-emerald-200 w-full h-32 rounded-lg shadow-md">
+  <code class="whitespace-pre-wrap">
+
+    
+  </code>
+</pre>
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" onclick="copyToClipboard('example')">
+</button>
+
+
+<script>
+function copyToClipboard(text) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  try {
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    console.log('Copied text to clipboard');
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
+  }
+}
+</script> -->

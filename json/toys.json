@@ -1,93 +1,141 @@
-[
-    {
-      "name": "Puzzle Cube",
-      "info": "A challenging puzzle cube to test your problem-solving skills.",
-      "category": "Board Games",
-      "img_url": "https://img.freepik.com/free-photo/3d-jigsaw-puzzle-with-four-pieces_1048-13290.jpg",
-      "price": 15.99,
-      "date_created": "2023-04-24T07:23:47.860+00:00",
-      "user_id": "643d26e90c93ca2726e89627"
-    },
-    {
-      "name": "Superhero Action Figures",
-      "info": "Set of action figures featuring popular superheroes.",
-      "category": "Imagination",
-      "img_url": "https://img.freepik.com/free-photo/superheroe-pose_1048-1701.jpg",
-      "price": 24.99,
-      "date_created": "2023-04-24T07:23:47.860+00:00",
-      "user_id": "643d29c484fc8204b4a04a90"
-    },
-    {
-      "name": "Fashion Doll Set",
-      "info": "A collection of fashion dolls with various outfits and accessories.",
-      "category": "Dolls",
-      "img_url": "https://img.freepik.com/free-photo/needle-sewing-handmade-objects-marble-table_53876-23001.jpg",
-      "price": 29.99,
-      "date_created": "2023-04-24T07:23:47.860+00:00",
-      "user_id": "64462e249768b41056b37756"
-    },
-    {
-      "name": "Magnetic Building Blocks",
-      "info": "Colorful magnetic blocks for building various structures.",
-      "category": "Magnets",
-      "img_url": "https://img.freepik.com/free-photo/close-up-photo-hight-colorful-chalks-tower_171337-10458.jpg",
-      "price": 19.99,
-      "date_created": "2023-04-24T07:23:47.860+00:00",
-      "user_id": "64462e839768b41056b37758"
-    },
-    {
-      "name": "Art and Craft Kit",
-      "info": "A creative kit with art supplies for making beautiful crafts.",
-      "category": "Crafts",
-      "img_url": "https://img.freepik.com/free-photo/artist-tools-collection-paper-sheet_23-2148575572.jpg",
-      "price": 12.99,
-      "date_created": "2023-04-24T07:23:47.860+00:00",
-      "user_id": "64510fbec49a0af8b4f7eb37"
-    },
-    {
-      "name": "Building Blocks Set",
-      "info": "Set of building blocks to construct various structures.",
-      "category": "Imagination",
-      "img_url": "https://img.freepik.com/free-photo/building-blocks-wooden-background-colorful-wooden-building-blocks_1205-1630.jpg",
-      "price": 17.99,
-      "date_created": "2023-04-24T07:23:47.860+00:00",
-      "user_id": "64589b14f66a3178adb0e655"
-    },
-    {
-      "name": "Stuffed Animal Plushies",
-      "info": "Cute and cuddly stuffed animal plushies for play and decoration.",
-      "category": "Imagination",
-      "img_url": "https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686871.jpg",
-      "price": 9.99,
-      "date_created": "2023-04-24T07:23:47.860+00:00",
-      "user_id": "64589bf9f66a3178adb0e65a"
-    },
-    {
-      "name": "Wooden Puzzle Set",
-      "info": "Set of wooden puzzles with different difficulty levels.",
-      "category": "Board Games",
-      "img_url": "https://img.freepik.com/free-photo/jigsaw-teamwork-concept-macro-shot_53876-17929.jpg",
-      "price": 14.99,
-      "date_created": "2023-04-24T07:23:47.860+00:00",
-      "user_id": "64589d0c1df7988253ee28b3"
-    },
-    {
-      "name": "Science Experiment Kit",
-      "info": "A kit for conducting fun and educational science experiments.",
-      "category": "Imagination",
-      "img_url": "https://img.freepik.com/free-photo/little-boy-as-chemist-doing-experiment-with-chemical-fluid-laboratory_155003-2183.jpg",
-      "price": 21.99,
-      "date_created": "2023-04-24T07:23:47.860+00:00",
-      "user_id": "6458b71519cc7b9af66017ae"
-    },
-    {
-      "name": "Jewelry Making Kit",
-      "info": "A kit for creating beautiful jewelry pieces.",
-      "category": "Crafts",
-      "img_url": "https://img.freepik.com/free-photo/handmade-decorative-bangles-jewelry-wooden-table_23-2147899027.jpg",
-      "price": 16.99,
-      "date_created": "2023-04-24T07:23:47.860+00:00",
-      "user_id": "6458b7b119cc7b9af66017b0"
-    }
-  ]
-  
+[{
+  "_id": {
+    "$oid": "647306216d991d2b320df052"
+  },
+  "name": "Puzzle Cube",
+  "info": "A challenging puzzle cube to test your problem-solving skills.",
+  "category": "Board Games",
+  "img_url": "https://img.freepik.com/free-photo/3d-jigsaw-puzzle-with-four-pieces_1048-13290.jpg",
+  "price": 15.99,
+  "date_created": "2023-04-24T07:23:47.860+00:00",
+  "user_id": "643d26e90c93ca2726e89627"
+},
+{
+  "_id": {
+    "$oid": "647306216d991d2b320df053"
+  },
+  "name": "Superhero Action Figures",
+  "info": "Set of action figures featuring popular superheroes.",
+  "category": "Imagination",
+  "img_url": "https://img.freepik.com/free-photo/superheroe-pose_1048-1701.jpg",
+  "price": 30.99,
+  "date_created": "2023-04-24T07:23:47.860+00:00",
+  "user_id": "643d29c484fc8204b4a04a90",
+  "updatedAt": {
+    "$date": "2023-05-28T08:38:40.461Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "647306216d991d2b320df054"
+  },
+  "name": "Fashion Doll Set",
+  "info": "A collection of fashion dolls with various outfits and accessories.",
+  "category": "Dolls",
+  "img_url": "https://img.freepik.com/free-photo/needle-sewing-handmade-objects-marble-table_53876-23001.jpg",
+  "price": 29.99,
+  "date_created": "2023-04-24T07:23:47.860+00:00",
+  "user_id": "64462e249768b41056b37756"
+},
+{
+  "_id": {
+    "$oid": "647306216d991d2b320df055"
+  },
+  "name": "Magnetic Building Blocks",
+  "info": "Colorful magnetic blocks for building various structures.",
+  "category": "Magnets",
+  "img_url": "https://img.freepik.com/free-photo/close-up-photo-hight-colorful-chalks-tower_171337-10458.jpg",
+  "price": 19.99,
+  "date_created": "2023-04-24T07:23:47.860+00:00",
+  "user_id": "64462e839768b41056b37758"
+},
+{
+  "_id": {
+    "$oid": "647306216d991d2b320df056"
+  },
+  "name": "Art and Craft Kit",
+  "info": "A creative kit with art supplies for making beautiful crafts.",
+  "category": "Crafts",
+  "img_url": "https://img.freepik.com/free-photo/artist-tools-collection-paper-sheet_23-2148575572.jpg",
+  "price": 12.99,
+  "date_created": "2023-04-24T07:23:47.860+00:00",
+  "user_id": "64510fbec49a0af8b4f7eb37"
+},
+{
+  "_id": {
+    "$oid": "647306216d991d2b320df057"
+  },
+  "name": "Building Blocks Set",
+  "info": "Set of building blocks to construct various structures.",
+  "category": "Imagination",
+  "img_url": "https://img.freepik.com/free-photo/building-blocks-wooden-background-colorful-wooden-building-blocks_1205-1630.jpg",
+  "price": 17.99,
+  "date_created": "2023-04-24T07:23:47.860+00:00",
+  "user_id": "64589b14f66a3178adb0e655"
+},
+{
+  "_id": {
+    "$oid": "647306216d991d2b320df058"
+  },
+  "name": "Stuffed Animal Plushies",
+  "info": "Cute and cuddly stuffed animal plushies for play and decoration.",
+  "category": "Imagination",
+  "img_url": "https://img.freepik.com/free-photo/fluffy-toy-texture-close-up_23-2149686871.jpg",
+  "price": 9.99,
+  "date_created": "2023-04-24T07:23:47.860+00:00",
+  "user_id": "64589bf9f66a3178adb0e65a"
+},
+{
+  "_id": {
+    "$oid": "647306216d991d2b320df059"
+  },
+  "name": "Wooden Puzzle Set",
+  "info": "Set of wooden puzzles with different difficulty levels.",
+  "category": "Board Games",
+  "img_url": "https://img.freepik.com/free-photo/jigsaw-teamwork-concept-macro-shot_53876-17929.jpg",
+  "price": 14.99,
+  "date_created": "2023-04-24T07:23:47.860+00:00",
+  "user_id": "64589d0c1df7988253ee28b3"
+},
+{
+  "_id": {
+    "$oid": "647306216d991d2b320df05a"
+  },
+  "name": "Science Experiment Kit",
+  "info": "A kit for conducting fun and educational science experiments.",
+  "category": "Imagination",
+  "img_url": "https://img.freepik.com/free-photo/little-boy-as-chemist-doing-experiment-with-chemical-fluid-laboratory_155003-2183.jpg",
+  "price": 21.99,
+  "date_created": "2023-04-24T07:23:47.860+00:00",
+  "user_id": "6458b71519cc7b9af66017ae"
+},
+{
+  "_id": {
+    "$oid": "647306216d991d2b320df05b"
+  },
+  "name": "Jewelry Making Kit",
+  "info": "A kit for creating beautiful jewelry pieces.",
+  "category": "Crafts",
+  "img_url": "https://img.freepik.com/free-photo/handmade-decorative-bangles-jewelry-wooden-table_23-2147899027.jpg",
+  "price": 16.99,
+  "date_created": "2023-04-24T07:23:47.860+00:00",
+  "user_id": "6458b7b119cc7b9af66017b0"
+},
+{
+  "_id": {
+    "$oid": "647309aaccda451359d549bc"
+  },
+  "name": "Russian roulette",
+  "info": "Authentic gun play for kids and adults, includes 2 vintage guns and 20 bullets.",
+  "category": "Social Games",
+  "img_url": "https://img.freepik.com/free-photo/roulette-wheel-croupier-hand-with-white-ball-casino-close-up-details_639032-945.jpg",
+  "price": 99.23,
+  "user_id": "64462e249768b41056b37756",
+  "createdAt": {
+    "$date": "2023-05-28T07:58:34.587Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-28T07:58:34.587Z"
+  },
+  "__v": 0
+}]

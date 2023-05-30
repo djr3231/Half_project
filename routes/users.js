@@ -42,10 +42,8 @@ router.post("/", async (req, res) => {
   }
   try {
     const user = new UserModel(req.body);
-    // הצפנה של הסיסמא
     user.password = await bcrypt.hash(user.password, 10);
     await user.save();
-    // שינוי תצוגת הסיסמא לצד לקוח המתכנת
     user.password = "*****";
     res.status(201).json(user);
   }
@@ -64,15 +62,12 @@ router.post("/login", async (req, res) => {
     return res.status(400).json(validBody.error.details);
   }
   try {
-    // בודק אם המייל שנשלח בכלל קיים במסד
-    // findOne -> מוצא אחד בלבד ומחזיר אובייקט,אם לא מוצא מחזיר אנדיפיינד
+
     const user = await UserModel.findOne({ email: req.body.email });
     if (!user) {
       return res.status(401).json({ msg: "Email not found!" });
     }
-    // אם הסיסמא מתאימה לרשומה שמצאנו במסד שלנו כמוצפנת
-    //  bcrypt.compare -> בודק אם הסיסמא שהגיע מהצד לקוח בבאדי
-    // תואמת לסיסמא המוצפנתת בסיסמא
+
     const passwordValid = await bcrypt.compare(req.body.password, user.password);
     if (!passwordValid) {
       return res.status(401).json({ msg: "Password worng!" });
@@ -86,41 +81,22 @@ router.post("/login", async (req, res) => {
   }
 })
 
-// אדמין יוכל להפוך משתמש לאדמין או למשתמש רגיל
 router.patch("/changeRole/:id/:role", authAdmin, async (req, res) => {
   try {
     const {id,role} = req.params;
     if(role != "user" && role != "admin"){
       return res.status(401).json({err:"You can send admin or user role"})
     }
-    // אדמין לא יוכל לשנות את עצמו
     if(id == req.tokenData._id){
       return res.status(401).json({err:"you cant change your self"})
     }
-    // RegExp -> פקודת שלילה חייבת לעבוד עם ביטוי רגולרי
-    // כדי לדאוג שלא נוכל להשפיע על סופר אדמין
+
     const data = await UserModel.updateOne({_id:id,role:{$not:new RegExp("superadmin")}},{role});
     res.json(data);
   }
   catch (err) {
     console.log(err);
     res.status(502).json({ err })
-  }
-})
-
-// מעדכן מועדפים במערך של משתמש
-router.patch("/updateFavs/", auth, async(req,res) => {
-  try{
-    // בדוק שהבאדי שלך פאבס איי אר שהוא מערך
-    if(!Array.isArray(req.body.favs_ar)){
-      return res.status(400).json({msg:"You need to send favs_ar as array"});
-    }
-    const data = await UserModel.updateOne({_id:req.tokenData._id},{favs_ar:req.body.favs_ar})
-    res.json(data);
-  }
-  catch(err){
-    console.log(err);
-    res.status(502).json({err})
   }
 })
 

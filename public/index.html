@@ -17,7 +17,7 @@
 
     <div class="px-4 sm:px-0 text-center ">
       <h2 class="text-5xl leading-7 text-gray-200">Toys documentation</h2>
-      <p class="mt-2 text-md leading-6 text-gray-500">Personal details and application.</p>
+      <p class="mt-2 text-md leading-6 text-gray-500">Details and application.</p>
     </div>
     <div class="toys-table-wraper text-teal-300">
 
@@ -102,7 +102,7 @@
   }
                   </pre>
                   <li> <strong>img_url:</strong> Attribute Is Allowed But Its Not Required.</li>
-                  <li> <strong>user_id:</strong> Added automatically to registered user.</li>
+                  <li> <strong>user_id:</strong> Added automatically to Authenticated User.</li>
                   <li> <strong>date_created:</strong> Added automatically with execution time.</li>
                 
               </ul>
@@ -147,7 +147,7 @@
 
     </div>
 
-  
+  //users API
     <div class="users-table-wraper text-teal-300">
 
       <h1 class="text-4xl mt-8 underline">Users API</h1>
@@ -165,109 +165,120 @@
         <tbody>
           <tr>
             <td class="border-b pb-5 px-5  border-slate-500">GET</td>
-            <td class="border-b pb-5 px-5  border-slate-500">/toys</td>
-            <td class="border-b pb-5 px-5  border-slate-500">Returns A List Of Toys According To The query.</td>
-            <td class="border-b pb-5 px-5  border-slate-500">
-              <ul class="list-image-[url(./assets/question-mark-coust.svg)]">
-                <li> <strong>page:</strong> (optional): Page Number To Display (default: 1). For Example:
-                  <br>
-                  <a href="">page</a>
-                  </class=li>
-                <li> <strong>perPage:</strong> (optional): Toys To Display Per Page (default: 5). For Example:
-                  <br>
-                  <a href="">perPage:</a>
-                </li>
-                <li> <strong>sort</strong> (optional): Query To Sort By (default: name, Descending Order). For Example:
-                  <br>
-                  <a href="">page:</a>
-                </li>
-                <li> <strong>reverse:</strong> (optional): If Reverse Is Set To yes, The Sort Will Be In Ascending
-                  Order, For Example:
-                  <br>
-                  <a href="">page</a>
-                </li>
-                <li> <strong>s:</strong> (optional): A search query by name or info field, returns a matching toy list
-                  to the query. For Example:
-                  <br>
-                  <a href="">page</a>
-                </li>
-                <li> <strong>category:</strong> (optional): The Name Of The Category That Will Return A Toy List Based
-                  On The Category. For Example:
-                  <br>
-                  <a href="">page</a>
-                </li>
-                <li> <strong>user_id:</strong> (optional): The user id associated with the toy returns a toy list
-                  associated with the user. For Example:
-                  <br>
-                  <a href="">page</a>
-                </li>
-              </ul>
-            </td>
+            <td class="border-b pb-5 px-5  border-slate-500">/users</td>
+            <td class="border-b pb-5 px-5  border-slate-500">Test Endpoint To Check If The Server Is Up And Running.</td>
+            <td class="border-b pb-5 px-5  border-slate-500">N/A</td>
           </tr>
           <tr>
-            <td class="border-b pb-5 px-5 border-slate-500">GET</td>
-            <td class="border-b pb-5 px-5 border-slate-500">/toys/count</td>
-            <td class="border-b pb-5 px-5 border-slate-500">Returns a summary of the number of records and the number of
-              pages per query</td>
-            <td class="border-b pb-5 px-5 border-slate-500">Queries correspond to GET /toys: perPage, s, category &
-              user_id.
-            </td>
+            <td class="border-b pb-5 px-5  border-slate-500">GET</td>
+            <td class="border-b pb-5 px-5  border-slate-500">/users/userInfo</td>
+            <td class="border-b pb-5 px-5  border-slate-500">Get The Iinformation For The Authenticated User (requires authentication).</td>
+            <td class="border-b pb-5 px-5  border-slate-500">N/A</td>
           </tr>
+          
           <tr>
             <td class="border-b pb-5 px-5 border-slate-500">POST</td>
-            <td class="border-b pb-5 px-5 border-slate-500">/toys</td>
-            <td class="border-b pb-5 px-5 border-slate-500">Adds a new toy</td>
+            <td class="border-b pb-5 px-5 border-slate-500">/users</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Create A New User.</td>
             <td class="border-b pb-5 px-5 border-slate-500">
               <ul class="list-disc">
-                <li> <strong>Request Body:</strong> Toy Data To Be Added Has To Follow The Format Below.
-                </li>
+                <li> <strong>Request Body: </strong> User to be added has to follow the format below: </li>
                   <pre class="text-green-500">
 
   {
     <span class="text-fuchsia-200">"name":</span> "String",
-    <span class="text-fuchsia-200">"info":</span> "String",
-    <span class="text-fuchsia-200">"category":</span> "String",
-    <span class="text-fuchsia-200">"price":</span> "Number"
-  }
+    <span class="text-fuchsia-200">"email":</span> "String",
+    <span class="text-fuchsia-200">"password":</span> "String"
+    }
                   </pre>
-                  <li> <strong>img_url:</strong> Attribute Is Allowed But Its Not Required.</li>
-                  <li> <strong>user_id:</strong> Added automatically to registered user.</li>
-                  <li> <strong>date_created:</strong> Added automatically with execution time.</li>
+                  <li> <strong>role: </strong> Attribute is not allowed, but created atomically as a "user".</li>
                 
               </ul>
             </td>
           </tr>
           <tr>
-            <td class="border-b pb-5 px-5 border-slate-500">PUT</td>
-            <td class="border-b pb-5 px-5 border-slate-500">/toys/:id</td>
-            <td class="border-b pb-5 px-5 border-slate-500">Updates An Existing Toy.</td>
+            <td class="border-b pb-5 px-5 border-slate-500">POST</td>
+            <td class="border-b pb-5 px-5 border-slate-500">/users/login</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Authenticate a user and receive a JWT token in response.</td>
             <td class="border-b pb-5 px-5 border-slate-500">
               <ul class="list-disc">
-                <li> <strong>:id :</strong> the ID of the toy to update.</li>
-                <li> <strong>Request Body:</strong> Toy Data To Be Added Has To Follow The Format Below.
+                <li> <strong>Request Body: </strong> User authentication should follow the format below:
                 </li>
                   <pre class="text-green-500">
 
   {
-    <span class="text-fuchsia-200">"name":</span> "String",
-    <span class="text-fuchsia-200">"info":</span> "String",
-    <span class="text-fuchsia-200">"category":</span> "String",
-    <span class="text-fuchsia-200">"price":</span> "Number",
-    <span class="text-fuchsia-200">"img_url":</span> "String"
+    <span class="text-fuchsia-200">"email":</span> "String",
+    <span class="text-fuchsia-200">"password":</span> "String"
   }
                   </pre>
-                  <li> <strong>img_url:</strong> Attribute Is Allowed But Its Not Required.</li>
-                  <li> <strong>updatedAt:</strong> Added automatically with execution time.</li>
                 
               </ul>
             </td>
           </tr>
           <tr>
             <td class="border-b pb-5 px-5 border-slate-500">DELETE</td>
-            <td class="border-b pb-5 px-5 border-slate-500">toys/:id</td>
-            <td class="border-b pb-5 px-5 border-slate-500">Deletes A Toy By Its ID.</td>
-            <td class="border-b pb-5 px-5 border-slate-500">ID Of The Toy To Delete..
+            <td class="border-b pb-5 px-5 border-slate-500">users/:id</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Deletes a user by its ID.</td>
+            <td class="border-b pb-5 px-5 border-slate-500">ID Of the user to delete.
             </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+// admin Abillities
+    </div>
+    <div class="admin-table-wraper text-teal-300">
+
+      <h1 class="text-4xl mt-8 underline text-center">Admin vs User Abillities</h1>
+
+      <table class="border-separate	border-spacing-y-5 table-auto mt-3 w-full text-center ">
+        <thead>
+          <tr>
+            <th class="border-b pb-5 px-5 border-slate-300">Admin</th>
+            <th class="border-b pb-5 px-5 border-slate-300">User</th>
+            <th class="border-b pb-5 px-5 border-slate-300">Ability</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border-b pb-5 px-5  border-slate-500">V</td>
+            <td class="border-b pb-5 px-5  border-slate-500">V</td>
+            <td class="border-b pb-5 px-5  border-slate-500">Create a new toy or user record</td>
+
+          </tr>
+          <tr>
+            <td class="border-b pb-5 px-5  border-slate-500">V</td>
+            <td class="border-b pb-5 px-5  border-slate-500">V</td>
+            <td class="border-b pb-5 px-5  border-slate-500">Edit a self-created toy record.</td>
+
+          </tr>
+          <tr>
+            <td class="border-b pb-5 px-5  border-slate-500">V</td>
+            <td class="border-b pb-5 px-5  border-slate-500">V</td>
+            <td class="border-b pb-5 px-5  border-slate-500">Delete a self-created toy record.</td>
+
+          </tr>
+          
+          <tr>
+            <td class="border-b pb-5 px-5 border-slate-500">V</td>
+            <td class="border-b pb-5 px-5 border-slate-500">X</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Edit a toy record created by another user.</td>
+
+          </tr>
+          
+          <tr>
+            <td class="border-b pb-5 px-5 border-slate-500">V</td>
+            <td class="border-b pb-5 px-5 border-slate-500">X</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Delete a toy record created by another user.</td>
+
+          </tr>
+          <tr>
+            <td class="border-b pb-5 px-5 border-slate-500">V</td>
+            <td class="border-b pb-5 px-5 border-slate-500">X</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Change the role of another user or admin </td>
+
           </tr>
 
         </tbody>
@@ -277,6 +288,31 @@
     </div>
 
   </div>
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-gray-300 hover:text-white">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" class="text-gray-300 hover:text-white">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-gray-300 hover:text-white">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <div class="text-center">
+        <p class="text-gray-300 font-semibold">Toys API Documentation</p>
+      </div>
+      <div class="mt-4 text-center">
+        <p class="text-gray-300 font-semibold">
+          &copy; 2023 David Roth.<br>
+          All rights reserved.<br>
+          Photos by www.freepik.com
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

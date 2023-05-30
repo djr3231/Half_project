@@ -15,10 +15,7 @@ const userSchema = new mongoose.Schema({
 exports.UserModel = mongoose.model("users",userSchema);
 
 exports.createToken = (user_id,role = "user") => {
-  // מייצרים טוקן
-  // פרמטר ראשון התכולה של הטוקן ,כרגע איי די בהמשך יהיה גם רול/תפקיד
-  // פרמטר שני - מילה סודית בשביל לפענח את הטוקן
-  // פרמטר שלישי תוקף הטוקן
+
   const token = jwt.sign({_id:user_id,role},process.env.TOKEN_SECRET,{expiresIn:"60000mins"})
   return token;
 }

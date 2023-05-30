@@ -5,11 +5,7 @@ const { config } = require("dotenv");
 const router = express.Router();
 
 
-// router.get("/", async (req, res) => {
-//   res.json({ msg: "toys endpoint"
-//   });
-  
-// })
+
 
 router.get("/", async(req,res) => {
   try{

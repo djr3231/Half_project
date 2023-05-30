@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <link rel="stylesheet" href="./style.scss">
   <title>Document</title>
 </head>
 
@@ -34,8 +34,39 @@
           <tr >
             <td class="border-b pb-5 border-slate-500">GET</td>
             <td class="border-b pb-5 border-slate-500">/toys</td>
-            <td class="border-b pb-5 border-slate-500">1961</td>
-            <td class="border-b pb-5 border-slate-500">1961</td>
+            <td class="border-b pb-5 border-slate-500">Returns A List Of Toys According To The query.</td>
+            <td class="border-b pb-5 border-slate-500">
+              <ul id="list-question-mark">
+                <li> <strong>?page</strong> (optional): Page Number To Display (default: 1). For Example:
+                  <br>
+                  <a href="">page</a>
+                </li>
+                <li> <strong>?perPage</strong> (optional): Toys To Display Per Page (default: 5). For Example:
+                  <br>
+                  <a href="">perPage</a>
+                </li>
+                <li> <strong>?sort</strong> (optional): Query To Sort By (default: name, Descending Order). For Example:
+                  <br>
+                  <a href="">page</a>
+                </li>
+                <li> <strong>?reverse</strong> (optional): If Reverse Is Set To yes, The Sort Will Be In Ascending Order, For Example:
+                  <br>
+                  <a href="">page</a>
+                </li>
+                <li> <strong>?s</strong> (optional): A search query by name or information field, returns a matching toy list to the query. For Example:
+                  <br>
+                  <a href="">page</a>
+                </li>
+                <li> <strong>?category</strong> (optional): Page Number To Display (default: 1). For Example:
+                  <br>
+                  <a href="">page</a>
+                </li>
+                <li> <strong>?user_id</strong> (optional): Page Number To Display (default: 1). For Example:
+                  <br>
+                  <a href="">page</a>
+                </li>
+              </ul>
+            </td>
           </tr>
           <tr >
             <td class="border-b pb-5 border-slate-500">GET</td>

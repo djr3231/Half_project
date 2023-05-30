@@ -5,17 +5,17 @@ const { config } = require("dotenv");
 const router = express.Router();
 
 
-router.get("/", async (req, res) => {
-  res.json({ msg: "toys endpoint"
-  });
+// router.get("/", async (req, res) => {
+//   res.json({ msg: "toys endpoint"
+//   });
   
-})
+// })
 
 router.get("/", async(req,res) => {
   try{
-    const perPage = req.query.perPage || 10;
+    const perPage = req.query.perPage || 5;
     const page = req.query.page - 1 || 0;
-    const sort = req.query.sort || "_id";
+    const sort = req.query.sort || "name";
     const reverse = req.query.reverse == "yes" ? 1 : -1;
     const category = req.query.category;
     const search = req.query.s;
@@ -27,7 +27,6 @@ router.get("/", async(req,res) => {
     }
     if(search){
       const searchExp = new RegExp(search,"i");
-      // יחפש את הביטוי גם בשם וגם באינפו 
       filterFind = {$or:[{name:searchExp},{info:searchExp}]}
     }
     if(user_id){

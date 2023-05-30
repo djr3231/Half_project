@@ -10,77 +10,266 @@
   <title>Document</title>
 </head>
 
-<body class="bg-slate-900">
+<body class="font-semibold bg-slate-900">
 
 
   <div class="container mx-auto my-10 ">
 
-    <div class="px-4 sm:px-0 ">
-      <h2 class="text-3xl font-semibold leading-7 text-gray-200">Toys documentation</h2>
-      <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and application.</p>
+    <div class="px-4 sm:px-0 text-center ">
+      <h2 class="text-5xl leading-7 text-gray-200">Toys documentation</h2>
+      <p class="mt-2 text-md leading-6 text-gray-500">Personal details and application.</p>
     </div>
-    <div class="text-teal-300 ">
+    <div class="toys-table-wraper text-teal-300">
 
-      <table class="border-separate	border-spacing-y-5 table-auto mt-10 w-full text-left ">
-        <thead >
+      <h1 class="text-4xl mt-8 underline">Toys API</h1>
+
+      <table class="border-separate	border-spacing-y-5 table-auto mt-3 w-full text-left ">
+        <thead>
+
           <tr>
-            <th class="border-b pb-5 border-slate-300">HTTP Method</th>
-            <th class="border-b pb-5 border-slate-300">Route</th>
-            <th class="border-b pb-5 border-slate-300">Description</th>
-            <th class="border-b pb-5 border-slate-300">Parameters / Request Body</th>
+            <th class="border-b pb-5 px-5 border-slate-300">HTTP Method</th>
+            <th class="border-b pb-5 px-5 border-slate-300">Route</th>
+            <th class="border-b pb-5 px-5 border-slate-300">Description</th>
+            <th class="border-b pb-5 px-5 border-slate-300">Parameters / Request Body</th>
           </tr>
         </thead>
-        <tbody >
-          <tr >
-            <td class="border-b pb-5 border-slate-500">GET</td>
-            <td class="border-b pb-5 border-slate-500">/toys</td>
-            <td class="border-b pb-5 border-slate-500">Returns A List Of Toys According To The query.</td>
-            <td class="border-b pb-5 border-slate-500">
-              <ul id="list-question-mark">
-                <li> <strong>?page</strong> (optional): Page Number To Display (default: 1). For Example:
+        <tbody>
+          <tr>
+            <td class="border-b pb-5 px-5  border-slate-500">GET</td>
+            <td class="border-b pb-5 px-5  border-slate-500">/toys</td>
+            <td class="border-b pb-5 px-5  border-slate-500">Returns A List Of Toys According To The query.</td>
+            <td class="border-b pb-5 px-5  border-slate-500">
+              <ul class="list-image-[url(./assets/question-mark-coust.svg)]">
+                <li> <strong>page:</strong> (optional): Page Number To Display (default: 1). For Example:
+                  <br>
+                  <a href="">page</a>
+                  </class=li>
+                <li> <strong>perPage:</strong> (optional): Toys To Display Per Page (default: 5). For Example:
+                  <br>
+                  <a href="">perPage:</a>
+                </li>
+                <li> <strong>sort</strong> (optional): Query To Sort By (default: name, Descending Order). For Example:
+                  <br>
+                  <a href="">page:</a>
+                </li>
+                <li> <strong>reverse:</strong> (optional): If Reverse Is Set To yes, The Sort Will Be In Ascending
+                  Order, For Example:
                   <br>
                   <a href="">page</a>
                 </li>
-                <li> <strong>?perPage</strong> (optional): Toys To Display Per Page (default: 5). For Example:
-                  <br>
-                  <a href="">perPage</a>
-                </li>
-                <li> <strong>?sort</strong> (optional): Query To Sort By (default: name, Descending Order). For Example:
+                <li> <strong>s:</strong> (optional): A search query by name or info field, returns a matching toy list
+                  to the query. For Example:
                   <br>
                   <a href="">page</a>
                 </li>
-                <li> <strong>?reverse</strong> (optional): If Reverse Is Set To yes, The Sort Will Be In Ascending Order, For Example:
+                <li> <strong>category:</strong> (optional): The Name Of The Category That Will Return A Toy List Based
+                  On The Category. For Example:
                   <br>
                   <a href="">page</a>
                 </li>
-                <li> <strong>?s</strong> (optional): A search query by name or information field, returns a matching toy list to the query. For Example:
-                  <br>
-                  <a href="">page</a>
-                </li>
-                <li> <strong>?category</strong> (optional): Page Number To Display (default: 1). For Example:
-                  <br>
-                  <a href="">page</a>
-                </li>
-                <li> <strong>?user_id</strong> (optional): Page Number To Display (default: 1). For Example:
+                <li> <strong>user_id:</strong> (optional): The user id associated with the toy returns a toy list
+                  associated with the user. For Example:
                   <br>
                   <a href="">page</a>
                 </li>
               </ul>
             </td>
           </tr>
-          <tr >
-            <td class="border-b pb-5 border-slate-500">GET</td>
-            <td class="border-b pb-5 border-slate-500">/toys</td>
-            <td class="border-b pb-5 border-slate-500">1961</td>
-            <td class="border-b pb-5 border-slate-500">1961</td>
+          <tr>
+            <td class="border-b pb-5 px-5 border-slate-500">GET</td>
+            <td class="border-b pb-5 px-5 border-slate-500">/toys/count</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Returns a summary of the number of records and the number of
+              pages per query</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Queries correspond to GET /toys: perPage, s, category &
+              user_id.
+            </td>
           </tr>
-          <tr >
-            <td class="border-b pb-5 border-slate-500">GET</td>
-            <td class="border-b pb-5 border-slate-500">/toys</td>
-            <td class="border-b pb-5 border-slate-500">1961</td>
-            <td class="border-b pb-5 border-slate-500">1961</td>
+          <tr>
+            <td class="border-b pb-5 px-5 border-slate-500">POST</td>
+            <td class="border-b pb-5 px-5 border-slate-500">/toys</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Adds a new toy</td>
+            <td class="border-b pb-5 px-5 border-slate-500">
+              <ul class="list-disc">
+                <li> <strong>Request Body:</strong> Toy Data To Be Added Has To Follow The Format Below.
+                </li>
+                  <pre class="text-green-500">
+
+  {
+    <span class="text-fuchsia-200">"name":</span> "String",
+    <span class="text-fuchsia-200">"info":</span> "String",
+    <span class="text-fuchsia-200">"category":</span> "String",
+    <span class="text-fuchsia-200">"price":</span> "Number"
+  }
+                  </pre>
+                  <li> <strong>img_url:</strong> Attribute Is Allowed But Its Not Required.</li>
+                  <li> <strong>user_id:</strong> Added automatically to registered user.</li>
+                  <li> <strong>date_created:</strong> Added automatically with execution time.</li>
+                
+              </ul>
+            </td>
           </tr>
-          
+          <tr>
+            <td class="border-b pb-5 px-5 border-slate-500">PUT</td>
+            <td class="border-b pb-5 px-5 border-slate-500">/toys/:id</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Updates An Existing Toy.</td>
+            <td class="border-b pb-5 px-5 border-slate-500">
+              <ul class="list-disc">
+                <li> <strong>:id :</strong> the ID of the toy to update.</li>
+                <li> <strong>Request Body:</strong> Toy Data To Be Added Has To Follow The Format Below.
+                </li>
+                  <pre class="text-green-500">
+
+  {
+    <span class="text-fuchsia-200">"name":</span> "String",
+    <span class="text-fuchsia-200">"info":</span> "String",
+    <span class="text-fuchsia-200">"category":</span> "String",
+    <span class="text-fuchsia-200">"price":</span> "Number",
+    <span class="text-fuchsia-200">"img_url":</span> "String"
+  }
+                  </pre>
+                  <li> <strong>img_url:</strong> Attribute Is Allowed But Its Not Required.</li>
+                  <li> <strong>updatedAt:</strong> Added automatically with execution time.</li>
+                
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="border-b pb-5 px-5 border-slate-500">DELETE</td>
+            <td class="border-b pb-5 px-5 border-slate-500">toys/:id</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Deletes A Toy By Its ID.</td>
+            <td class="border-b pb-5 px-5 border-slate-500">ID Of The Toy To Delete..
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+    </div>
+
+  
+    <div class="users-table-wraper text-teal-300">
+
+      <h1 class="text-4xl mt-8 underline">Users API</h1>
+
+      <table class="border-separate	border-spacing-y-5 table-auto mt-3 w-full text-left ">
+        <thead>
+
+          <tr>
+            <th class="border-b pb-5 px-5 border-slate-300">HTTP Method</th>
+            <th class="border-b pb-5 px-5 border-slate-300">Route</th>
+            <th class="border-b pb-5 px-5 border-slate-300">Description</th>
+            <th class="border-b pb-5 px-5 border-slate-300">Parameters / Request Body</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border-b pb-5 px-5  border-slate-500">GET</td>
+            <td class="border-b pb-5 px-5  border-slate-500">/toys</td>
+            <td class="border-b pb-5 px-5  border-slate-500">Returns A List Of Toys According To The query.</td>
+            <td class="border-b pb-5 px-5  border-slate-500">
+              <ul class="list-image-[url(./assets/question-mark-coust.svg)]">
+                <li> <strong>page:</strong> (optional): Page Number To Display (default: 1). For Example:
+                  <br>
+                  <a href="">page</a>
+                  </class=li>
+                <li> <strong>perPage:</strong> (optional): Toys To Display Per Page (default: 5). For Example:
+                  <br>
+                  <a href="">perPage:</a>
+                </li>
+                <li> <strong>sort</strong> (optional): Query To Sort By (default: name, Descending Order). For Example:
+                  <br>
+                  <a href="">page:</a>
+                </li>
+                <li> <strong>reverse:</strong> (optional): If Reverse Is Set To yes, The Sort Will Be In Ascending
+                  Order, For Example:
+                  <br>
+                  <a href="">page</a>
+                </li>
+                <li> <strong>s:</strong> (optional): A search query by name or info field, returns a matching toy list
+                  to the query. For Example:
+                  <br>
+                  <a href="">page</a>
+                </li>
+                <li> <strong>category:</strong> (optional): The Name Of The Category That Will Return A Toy List Based
+                  On The Category. For Example:
+                  <br>
+                  <a href="">page</a>
+                </li>
+                <li> <strong>user_id:</strong> (optional): The user id associated with the toy returns a toy list
+                  associated with the user. For Example:
+                  <br>
+                  <a href="">page</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="border-b pb-5 px-5 border-slate-500">GET</td>
+            <td class="border-b pb-5 px-5 border-slate-500">/toys/count</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Returns a summary of the number of records and the number of
+              pages per query</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Queries correspond to GET /toys: perPage, s, category &
+              user_id.
+            </td>
+          </tr>
+          <tr>
+            <td class="border-b pb-5 px-5 border-slate-500">POST</td>
+            <td class="border-b pb-5 px-5 border-slate-500">/toys</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Adds a new toy</td>
+            <td class="border-b pb-5 px-5 border-slate-500">
+              <ul class="list-disc">
+                <li> <strong>Request Body:</strong> Toy Data To Be Added Has To Follow The Format Below.
+                </li>
+                  <pre class="text-green-500">
+
+  {
+    <span class="text-fuchsia-200">"name":</span> "String",
+    <span class="text-fuchsia-200">"info":</span> "String",
+    <span class="text-fuchsia-200">"category":</span> "String",
+    <span class="text-fuchsia-200">"price":</span> "Number"
+  }
+                  </pre>
+                  <li> <strong>img_url:</strong> Attribute Is Allowed But Its Not Required.</li>
+                  <li> <strong>user_id:</strong> Added automatically to registered user.</li>
+                  <li> <strong>date_created:</strong> Added automatically with execution time.</li>
+                
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="border-b pb-5 px-5 border-slate-500">PUT</td>
+            <td class="border-b pb-5 px-5 border-slate-500">/toys/:id</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Updates An Existing Toy.</td>
+            <td class="border-b pb-5 px-5 border-slate-500">
+              <ul class="list-disc">
+                <li> <strong>:id :</strong> the ID of the toy to update.</li>
+                <li> <strong>Request Body:</strong> Toy Data To Be Added Has To Follow The Format Below.
+                </li>
+                  <pre class="text-green-500">
+
+  {
+    <span class="text-fuchsia-200">"name":</span> "String",
+    <span class="text-fuchsia-200">"info":</span> "String",
+    <span class="text-fuchsia-200">"category":</span> "String",
+    <span class="text-fuchsia-200">"price":</span> "Number",
+    <span class="text-fuchsia-200">"img_url":</span> "String"
+  }
+                  </pre>
+                  <li> <strong>img_url:</strong> Attribute Is Allowed But Its Not Required.</li>
+                  <li> <strong>updatedAt:</strong> Added automatically with execution time.</li>
+                
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="border-b pb-5 px-5 border-slate-500">DELETE</td>
+            <td class="border-b pb-5 px-5 border-slate-500">toys/:id</td>
+            <td class="border-b pb-5 px-5 border-slate-500">Deletes A Toy By Its ID.</td>
+            <td class="border-b pb-5 px-5 border-slate-500">ID Of The Toy To Delete..
+            </td>
+          </tr>
+
         </tbody>
       </table>
 
@@ -91,30 +280,3 @@
 </body>
 
 </html>
-
-
-<!-- <pre class="bg-indigo-950 text-emerald-200 w-full h-32 rounded-lg shadow-md">
-  <code class="whitespace-pre-wrap">
-
-    
-  </code>
-</pre>
-<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" onclick="copyToClipboard('example')">
-</button>
-
-
-<script>
-function copyToClipboard(text) {
-  const textarea = document.createElement('textarea');
-  textarea.value = text;
-  document.body.appendChild(textarea);
-  textarea.select();
-  try {
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-    console.log('Copied text to clipboard');
-  } catch (err) {
-    console.error('Failed to copy text: ', err);
-  }
-}
-</script> -->

@@ -45,31 +45,31 @@ router.get("/", async(req,res) => {
     res.status(502).json({err})
   }
 })
-// router.get("/count", async(req,res) => {
-//   try{
-//     const perPage = req.query.perPage || 10;
-//     const category = req.query.category;
-//     const search = req.query.s;
-//     const user_id = req.query.user_id;
-//     let filterFind = {}
-//     if(category){
-//       filterFind = {category:category}
-//     }
-//     if(search){
-//       const searchExp = new RegExp(search,"i");
-//       filterFind = {$or:[{name:searchExp},{info:searchExp}]}
-//     }
-//     if(user_id){
-//       filterFind = {user_id}
-//     }
-//     const count = await toyModel.countDocuments(filterFind);
-//     res.json({count,pages:Math.ceil(count/perPage)})
-//   }
-//   catch(err){
-//     console.log(err);
-//     res.status(502).json({err})
-//   }
-// })
+router.get("/count", async(req,res) => {
+  try{
+    const perPage = req.query.perPage || 5;
+    const category = req.query.category;
+    const search = req.query.s;
+    const user_id = req.query.user_id;
+    let filterFind = {}
+    if(category){
+      filterFind = {category:category}
+    }
+    if(search){
+      const searchExp = new RegExp(search,"i");
+      filterFind = {$or:[{name:searchExp},{info:searchExp}]}
+    }
+    if(user_id){
+      filterFind = {user_id}
+    }
+    const count = await toyModel.countDocuments(filterFind);
+    res.json({count,pages:Math.ceil(count/perPage)})
+  }
+  catch(err){
+    console.log(err);
+    res.status(502).json({err})
+  }
+})
 
 
 
